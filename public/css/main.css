@@ -17,10 +17,11 @@ body {
 #topbar {
 	display: flex;
 	height: 32px;
-	background-color: #333;
-	color: #fff;
+	background-color: #fff;
 	align-items: center;
 	padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 #logo {
@@ -30,28 +31,12 @@ body {
 	cursor: pointer;
 }
 
-#user {
-	flex: 0 0 auto;
-	width: 40px;
-	height: 100%;
-}
-
 #user-button {
-	background-color: #444;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+	flex: 0 1 auto;
 	height: 100%;
-	width: 100%;
-	cursor: pointer;
-}
-
-#user-icon {
-	position: relative;
-	background-color: #777;
-	height: 20px;
-	width: 20px;
-	border-radius: 20px;
+    cursor: pointer;
 }
 
 #user-menu {
@@ -60,11 +45,7 @@ body {
 	box-shadow: 0 4px 2px #ccc;
 	top: 32px;
 	right: 20px;
-	width: 320px;
-}
-
-#user:hover {
-	background-color: #555;
+	width: 220px;
 }
 
 #nav {
@@ -82,7 +63,7 @@ body {
 	flex: 0 0 auto;
 	box-shadow: none;
 	box-sizing: border-box;
-	border: 1px solid #aaa;
+	border: 1px solid #bbb;
 }
 
 #actions {
@@ -103,51 +84,55 @@ button {
 	border: none;
 	color: #222;
 	padding: 5px 20px;
-	min-width: 100px;
 	cursor: pointer;
-	outline: 1px solid #ccc;
+	outline: 1px solid #bbb;
 }
 
 button:hover {
-	outline-color: #aaa;
+	outline-color: #888;
+}
+
+button svg {
+    width: 16px;
+}
+
+.button-with-icon {
+    padding: 5px 10px 5px 30px;
+    position: relative;
+    text-align: left;
+}
+
+.button-icon {
+    position: absolute;
+    left: 8px;
 }
 
 .is-hidden {
 	display: none !important;
 }
 
-ul {
+#user-menu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-li {
+#user-menu li {
 	width: 100%;
 	padding: 5px 0;
 }
 
-li:hover {
+#user-menu li:hover {
 	background-color: #eee;
 }
 
 li a {
 	text-decoration: none;
 	color: #222;
-	padding: 0 10px;
 }
 
-li.list-button {
-	background-color: #0d67f8;
-	display: inline-block;
-}
-
-li.list-button:hover {
-	background-color: #3443e5;
-}
-
-li.list-button a {
-	color: #fff;
+#user-menu li a {
+    padding: 0 10px;
 }
 
 #modal-overlay {
@@ -166,4 +151,45 @@ li.list-button a {
 	height: calc(100% - 40px);
 	margin: 20px;
 	background-color: #fff;
+}
+
+#breadcrumb {
+    padding: 10px 20px;
+    margin: 0;
+    list-style: none;
+}
+
+#breadcrumb li {
+    padding: 0 10px 0 0;
+    display: inline-block;
+    color: #0d67f8;
+}
+
+#breadcrumb li:last-child a {
+    color: #222;
+}
+
+#page {
+    padding: 20px;
+}
+
+.fill-dark {
+    fill: #555;
+}
+
+.fill-light {
+    fill: #ccc;
+}
+
+tr {
+    height: 32px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+.icon-cell svg {
+    width: 16px;
+    vertical-align: middle;
 }
