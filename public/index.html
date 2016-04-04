@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="logo">
+				Azure
+			</div>
+			<div class="flex-stretch"></div>
+			<div id="user">
+				<div id="user-button">
+					<div id="user-icon"></div>
+				</div>
+				<ul id="user-menu">
+					<li>
+						<a href="/billing">Billing</a>
+					</li>
+					<li class="list-button">
+						<a href="logout">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav">
+			<div id="actions">
+				<button>New Website</button>
+				<button>New VM</button>
+			</div>
+			<div class="flex-stretch"></div>
+			<input type="search" id="search">
+		</div>
+		<div id="modal-overlay" class="is-hidden">
+			<div id="modal"></div>
+		</div>
+		<div id="page">
+			<table id="resource-table">
+				<thead>
+				</thead>
+			</table>
+		</div>
+		<script src="js/controls.js"></script>
+		<script>
+		(function() {
+			// DOM is ready. Initialize!
+			initialize();
+		})();
+		</script>
+	</body>
+</html>

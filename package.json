@@ -1,0 +1,19 @@
+{
+  "name": "azure",
+  "version": "1.0.0",
+  "description": "mobile version of azure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bczulauf/azure.git"
+  },
+  "author": "ben zulauf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bczulauf/azure/issues"
+  },
+  "homepage": "https://github.com/bczulauf/azure#readme"
+}

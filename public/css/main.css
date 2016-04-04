@@ -1,0 +1,169 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+	color: #222;
+}
+
+.flex-stretch {
+	flex: 1 1 auto;
+}
+
+.button-icon img {
+	height: 16px;
+	width: 16px;
+}
+
+#topbar {
+	display: flex;
+	height: 32px;
+	background-color: #333;
+	color: #fff;
+	align-items: center;
+	padding: 0 20px;
+}
+
+#logo {
+	flex: 0 0 auto;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#user {
+	flex: 0 0 auto;
+	width: 40px;
+	height: 100%;
+}
+
+#user-button {
+	background-color: #444;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+#user-icon {
+	position: relative;
+	background-color: #777;
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+}
+
+#user-menu {
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0 4px 2px #ccc;
+	top: 32px;
+	right: 20px;
+	width: 320px;
+}
+
+#user:hover {
+	background-color: #555;
+}
+
+#nav {
+	display: flex;
+	height: 40px;
+	background-color: #f8f8f8;
+	align-items: center;
+	box-shadow: 0 4px 2px -2px #ccc;
+	padding: 0 20px;
+}
+
+#search {
+	border: none;
+	padding: 5px 20px;
+	flex: 0 0 auto;
+	box-shadow: none;
+	box-sizing: border-box;
+	border: 1px solid #aaa;
+}
+
+#actions {
+	flex: 0 1 auto;
+}
+
+#actions button {
+	margin-right: 4px;
+}
+
+#actions button:last-child {
+	margin-right: 0;
+}
+
+button {
+	font-family: Helvetica;
+	background-color: #fff;
+	border: none;
+	color: #222;
+	padding: 5px 20px;
+	min-width: 100px;
+	cursor: pointer;
+	outline: 1px solid #ccc;
+}
+
+button:hover {
+	outline-color: #aaa;
+}
+
+.is-hidden {
+	display: none !important;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	width: 100%;
+	padding: 5px 0;
+}
+
+li:hover {
+	background-color: #eee;
+}
+
+li a {
+	text-decoration: none;
+	color: #222;
+	padding: 0 10px;
+}
+
+li.list-button {
+	background-color: #0d67f8;
+	display: inline-block;
+}
+
+li.list-button:hover {
+	background-color: #3443e5;
+}
+
+li.list-button a {
+	color: #fff;
+}
+
+#modal-overlay {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, .7);
+}
+
+#modal {
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	margin: 20px;
+	background-color: #fff;
+}
