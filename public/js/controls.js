@@ -73,18 +73,21 @@ var Table = function(element, items, headers) {
     
     var tblHeader = document.createElement("div");
     tblHeader.id = "table-header";
-    
-    var tblBody = document.createElement("div");
-    tblBody.id = "table-body";
+	tblHeader.className = "table-row";
+	
+	tbl.appendChild(tblHeader);
     
     headers.forEach(function(header) {
-        var th = headerRow.insertCell();
+        var th = document.createElement("div");
+		th.className = "table-cell";
         
         th.appendChild(document.createTextNode(header));
+		tblHeader.appendChild(th);
     });
 	
 	items.forEach(function(item) {
-		var tr = tbl.insertRow();
+        var tr = document.createElement("div");
+		tr.className = "table-row";
 		var data = item.data;
         var metaData = item.metaData;
         var icon;
