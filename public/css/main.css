@@ -82,14 +82,15 @@ button {
 	font-family: Helvetica;
 	background-color: #fff;
 	border: none;
-	color: #222;
+	color: #0d67f8;
 	padding: 5px 20px;
 	cursor: pointer;
-	outline: 1px solid #bbb;
+	border: 1px solid #0d67f8;
 }
 
 button:hover {
-	outline-color: #888;
+    color: #3443e5;
+	border-color: #3443e5;
 }
 
 button svg {
@@ -154,7 +155,7 @@ li a {
 }
 
 #breadcrumb {
-    padding: 10px 20px;
+    padding: 20px;
     margin: 0;
     list-style: none;
 }
@@ -186,6 +187,23 @@ li a {
     display: flex;
     border-bottom: 1px solid #ddd;
     align-items: center;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.table-row button {
+    padding: 0;
+    margin-right: 10px;
+    border: none;
+    background: transparent;
+}
+
+.table-row button:last-child {
+    margin-right: 0;
+}
+
+.table-row:hover {
+    background-color: #eee;
 }
 
 .table-cell {

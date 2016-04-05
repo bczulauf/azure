@@ -1,7 +1,36 @@
 var popups = [];
 var isHiddenClass = "is-hidden";
+var data = [
+    {
+        row: {
+            icon: "website",
+            name: "zoom.com",
+            group: "zoom app",
+            actions: [ { text: "Stop", action: stopWebsite }, { text: "Visit", action: "link" } ]
+        },
+        uri: "/link"
+    },
+    {
+        row: {
+            icon: "website",
+            name: "gogo.com",
+            group: "go app",
+            actions: [ { text: "Stop", action: stopWebsite }, { text: "Visit", action: "link" } ]   
+        },
+        uri: "/link"
+    },
+    {
+        row: {
+            icon: "vm",
+            name: "text vm",
+            group: "testing",
+            actions: [ { text: "Stop", action: stopWebsite }, { text: "Visit", action: "link" } ]   
+        },
+        uri: "/link"
+    }
+];
 
-function isDescendant(parent, child) {
+var isDescendant = function(parent, child) {
      var node = child.parentNode;
 	 
      while (node != null) {
@@ -12,36 +41,6 @@ function isDescendant(parent, child) {
      }
      return false;
 }
-
-var Dropdown = function(button, menu, isOpen) {
-    this.button = button;
-	this.menu = menu;
-	this.isOpen = false;
-	
-	var that = this;
-	
-	this.button.classList.add("popup-button");
-	
-	if (!isOpen) {
-		this.menu.classList.add(isHiddenClass);
-	}
-    
-	button.addEventListener("click", function(event){
-		that.isOpen ? that.hide() : that.show();
-	}, false);
-	
-	popups.push(this);
-};
-
-Dropdown.prototype.show = function() {
-    this.menu.classList.remove(isHiddenClass);
-	this.isOpen = true;
-};
-
-Dropdown.prototype.hide = function() {
-    this.menu.classList.add(isHiddenClass);
-	this.isOpen = false;
-};
 
 function initialize() {
 	var userButton = document.getElementById("user-button");
