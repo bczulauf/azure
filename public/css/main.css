@@ -170,7 +170,7 @@ li a {
 }
 
 #page {
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .fill-dark {
@@ -181,15 +181,26 @@ li a {
     fill: #ccc;
 }
 
-tr {
-    height: 32px;
-}
-
-td {
+.table-row {
+    height: 30px;
+    display: flex;
     border-bottom: 1px solid #ddd;
+    align-items: center;
 }
 
-.icon-cell svg {
+.table-cell {
+    flex: 1 1 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
+
+.table-cell svg {
     width: 16px;
     vertical-align: middle;
+}
+
+.table-header {
+    font-weight: bold;
 }
