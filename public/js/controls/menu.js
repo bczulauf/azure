@@ -8,17 +8,21 @@ var Menu = function(element, options) {
 	
 	this.items.forEach(function(item) {
 		// Creates the list item.
-        var itemElem = document.createElement('li');
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+
+        a.href = "";
 		
 		if (that.selected.name === item.name) {
-			itemElem.className = selectedClass;
+			a.className = selectedClass;
 		}
 
         // Sets its contents.
-        itemElem.appendChild(document.createTextNode(item.name));
+        a.appendChild(document.createTextNode(item.name));
+        li.appendChild(a);
 
         // Adds it to the list.
-        menu.appendChild(itemElem)
+        menu.appendChild(li)
 	});
 	
 	element.appendChild(menu);

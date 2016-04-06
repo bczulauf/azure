@@ -127,7 +127,7 @@ button svg {
 	background-color: #eee;
 }
 
-li a {
+#user-menu li a {
 	text-decoration: none;
 	color: #222;
 }
@@ -155,17 +155,14 @@ li a {
 }
 
 #breadcrumb {
-    padding: 10px 0;
+    padding: 10px 20px;
     list-style: none;
-	border-bottom: 1px solid #ddd;
-	margin: 0 20px 10px 20px;
 }
 
 #breadcrumb li {
     padding: 0 10px 0 0;
     display: inline-block;
     color: #0d67f8;
-	font-size: 12px;
 }
 
 #breadcrumb li:last-child a {
@@ -174,7 +171,6 @@ li a {
 
 #page {
 	display: flex;
-    padding: 0 20px;
 }
 
 #page-menu {
@@ -185,6 +181,7 @@ li a {
 
 #page-content {
 	flex: 1 1 auto;
+    padding-right: 20px;
 }
 
 #page-menu ul {
@@ -197,8 +194,13 @@ li a {
 	display: flex;
 	align-items: center;
 	height: 24px;
-	padding-left: 10px;
+	padding-left: 20px;
 	font-size: 14px;
+}
+
+#page-menu li a {
+    color: #0d67f8;
+    text-decoration: none;
 }
 
 .fill-dark {
@@ -234,11 +236,14 @@ li a {
 }
 
 .table-cell {
-    flex: 1 1 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     padding-right: 20px;
+}
+
+.equal-width {
+    flex: 1 1 0;
 }
 
 .table-cell svg {
@@ -250,6 +255,6 @@ li a {
     font-weight: bold;
 }
 
-.selected {
-	background-color: #ddd;
+a.selected {
+	color: #222 !important;
 }

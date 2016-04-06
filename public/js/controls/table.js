@@ -46,9 +46,17 @@ var Table = function(element, options) {
         tblHeader.classList.add("table-header", "table-row");
         tbl.appendChild(tblHeader);
         
-        this.colHeaders.forEach(function(header) {
+        if (!that.colWidths) {
+            tblHeader.classList.add("equal-widths")
+        }
+        
+        this.colHeaders.forEach(function(header, index) {
             var th = document.createElement("div");
             th.className = "table-cell";
+            
+            if (that.colWidths) {
+                th.style.width = that.colWidths[index];  
+            }
 
             th.appendChild(document.createTextNode(header));
             tblHeader.appendChild(th);
@@ -60,10 +68,20 @@ var Table = function(element, options) {
         var tr = document.createElement("div");
         tr.className = "table-row";
         
+        if (!that.colWidths) {
+            tr.classList.add("equal-widths")
+        }
+        
+        var count = 0;
+        
 		for (var key in row) {
             if (row.hasOwnProperty(key)) {
                 var td = document.createElement("div");
                 td.className = "table-cell";
+                
+                if (that.colWidths) {
+                    td.style.width = that.colWidths[count];  
+                }
                 
                 if (that.columns) {
                     var renderer = that.columns[key].renderer;
@@ -81,6 +99,7 @@ var Table = function(element, options) {
                 }
 
                 tr.appendChild(td);
+                count++;
             }
         }
         

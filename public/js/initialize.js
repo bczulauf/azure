@@ -64,7 +64,7 @@ function initialize() {
 	var userDropdown = new Dropdown(userButton, userMenu);
     var resourceTable = new Table(pageContent, {
         data: data,
-        colWidths:  [1, 6, 3, 2],
+        colWidths:  ["40px", "50%", "20%", "30%"],
         colHeaders: ["", "Name", "Group", ""],
         columns: {
             icon: { renderer: svgRenderer },
