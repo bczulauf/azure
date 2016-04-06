@@ -1,7 +1,6 @@
 var crypto = require('crypto');
 var adal = require('adal-node');
 var AuthenticationContext = adal.AuthenticationContext;
-
 var parametersFile = process.argv[2] || process.env['ADAL_SAMPLE_PARAMETERS_FILE'];
 var sampleParameters
 
@@ -30,7 +29,7 @@ function createAuthorizationUrl(state) {
 }
 
 module.exports = {
-    registerRoutes: function(app){
+    registerRoutes: function(req, res){
         app.get("/getAToken", function(req, res) {
             if (req.cookies.authstate !== req.query.state) {
                 res.send('error: state does not match');
