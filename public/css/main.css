@@ -155,15 +155,17 @@ li a {
 }
 
 #breadcrumb {
-    padding: 20px;
-    margin: 0;
+    padding: 10px 0;
     list-style: none;
+	border-bottom: 1px solid #ddd;
+	margin: 0 20px 10px 20px;
 }
 
 #breadcrumb li {
     padding: 0 10px 0 0;
     display: inline-block;
     color: #0d67f8;
+	font-size: 12px;
 }
 
 #breadcrumb li:last-child a {
@@ -171,7 +173,32 @@ li a {
 }
 
 #page {
+	display: flex;
     padding: 0 20px;
+}
+
+#page-menu {
+	width: 140px;
+	flex: 0 0 auto;
+	margin-right: 40px;
+}
+
+#page-content {
+	flex: 1 1 auto;
+}
+
+#page-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#page-menu li {
+	display: flex;
+	align-items: center;
+	height: 24px;
+	padding-left: 10px;
+	font-size: 14px;
 }
 
 .fill-dark {
@@ -221,4 +248,8 @@ li a {
 
 .table-header {
     font-weight: bold;
+}
+
+.selected {
+	background-color: #ddd;
 }

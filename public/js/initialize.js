@@ -29,6 +29,20 @@ var data = [
         uri: "/link"
     }
 ];
+var apps = [
+    {
+        name: "Website",
+        icon: websiteIcon
+    },
+    {
+        name: "VM",
+        icon: vmIcon
+    },
+    {
+        name: "SQL Database",
+        icon: dbIcon
+    }
+]
 
 var isDescendant = function(parent, child) {
      var node = child.parentNode;
@@ -45,18 +59,24 @@ var isDescendant = function(parent, child) {
 function initialize() {
 	var userButton = document.getElementById("user-button");
 	var userMenu = document.getElementById("user-menu");
-    var page = document.getElementById("page");
+    var pageContent = document.getElementById("page-content");
+    var pageMenu = document.getElementById("page-menu");
 	var userDropdown = new Dropdown(userButton, userMenu);
-    var resourceTable = new Table(page, {
+    var resourceTable = new Table(pageContent, {
         data: data,
         colWidths:  [1, 6, 3, 2],
-        colHeaders: ["", "Name", "Group", "Actions"],
+        colHeaders: ["", "Name", "Group", ""],
         columns: {
             icon: { renderer: svgRenderer },
             name: { renderer: "text" },
             group: { renderer: "text" },
             actions: { renderer: actionsRenderer }
         }
+    });
+    var menuItems = apps.slice(0);
+    menuItems.unshift({ name: "All", icon: "" });
+    var resourceMenu = new Menu(pageMenu, {
+        data: menuItems
     });
 	
 	// Hides each popup on document click.
