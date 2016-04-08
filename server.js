@@ -6,7 +6,7 @@ var port = process.env.PORT || 8081;
 
 app.use(express.static(__dirname + '/public'));
 
-routes.registerRoutes(app);
+app.get("/getAToken", routes.auth(req, res));
 
 app.listen(port, function() {
     console.log("app listening on port: " + port)

@@ -22,9 +22,27 @@ var data = [
     {
         row: {
             icon: "vm",
-            name: "text vm",
+            name: "test vm",
             group: "testing",
-            actions: [ { text: "Stop", action: stopWebsite }, { text: "Visit", action: "link" } ]   
+            actions: [ { text: "Stop", action: stopWebsite } ]   
+        },
+        uri: "/link"
+    },
+    {
+        row: {
+            icon: "vm",
+            name: "amazing vm",
+            group: "testing",
+            actions: [ { text: "Stop", action: stopWebsite } ]   
+        },
+        uri: "/link"
+    },
+    {
+        row: {
+            icon: "vm",
+            name: "Even better",
+            group: "testing",
+            actions: [ { text: "Stop", action: stopWebsite } ]   
         },
         uri: "/link"
     }
@@ -74,7 +92,7 @@ function initialize() {
         }
     });
     var menuItems = apps.slice(0);
-    menuItems.unshift({ name: "All", icon: "" });
+    menuItems.unshift({ name: "All", icon: allIcon });
     var resourceMenu = new Menu(pageMenu, {
         data: menuItems
     });

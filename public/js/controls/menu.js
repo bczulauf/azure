@@ -18,7 +18,14 @@ var Menu = function(element, options) {
 		}
 
         // Sets its contents.
-        a.appendChild(document.createTextNode(item.name));
+        var icon = document.createElement("div");
+        icon.innerHTML = item.icon;
+        a.appendChild(icon);
+        
+        var text = document.createElement("div");
+        text.className = "menu-text";
+        text.appendChild(document.createTextNode(item.name));
+        a.appendChild(text);
         li.appendChild(a);
 
         // Adds it to the list.

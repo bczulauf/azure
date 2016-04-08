@@ -1,8 +1,8 @@
 var authController = require('./controllers/auth');
 
 module.exports = {
-    registerRoutes: function(app) {
+    authRoute: function(req, res) {
         // Registers controller routes.
-		authController.registerRoutes(app);
+		authController.route(req, res);
     }
 }

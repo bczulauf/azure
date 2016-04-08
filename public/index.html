@@ -4,11 +4,13 @@
 	</head>
 	<body>
 		<div id="topbar">
-			<div id="logo">
+			<a a href="" id="logo">
 				Gazure
-			</div>
+			</a>
 			<div class="flex-stretch"></div>
-			<div id="user-button">
+            <a class="topbar-link selected" href="">Resources</a>
+            <a class="topbar-link" href="">Dashboards</a>
+			<a id="user-button" class="topbar-link">
                 Ben Zulauf
 				<ul id="user-menu">
 					<li>
@@ -18,7 +20,7 @@
 						<a href="logout">Logout</a>
 					</li>
 				</ul>
-			</div>
+			</a>
 		</div>
 		<div id="nav">
 			<div id="actions">
@@ -42,7 +44,7 @@
                 </button>
 			</div>
 			<div class="flex-stretch"></div>
-			<input type="search" id="search">
+			<input type="search" id="search" placeholder="Search resources">
 		</div>
 		<div id="modal-overlay" class="is-hidden">
 			<div id="modal"></div>

@@ -22,13 +22,24 @@ body {
 	padding: 0 20px;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
-#logo {
+#topbar a {
+    color: #0d67f8;
+    text-decoration: none;
+}
+
+.topbar-link {
+    margin-left: 10px;
+}
+
+a#logo {
 	flex: 0 0 auto;
 	font-size: 16px;
 	font-weight: bold;
 	cursor: pointer;
+    color: #222;
 }
 
 #user-button {
@@ -59,7 +70,7 @@ body {
 
 #search {
 	border: none;
-	padding: 5px 20px;
+	padding: 5px;
 	flex: 0 0 auto;
 	box-shadow: none;
 	box-sizing: border-box;
@@ -82,15 +93,15 @@ button {
 	font-family: Helvetica;
 	background-color: #fff;
 	border: none;
-	color: #0d67f8;
+	color: #222;
 	padding: 5px 20px;
 	cursor: pointer;
-	border: 1px solid #0d67f8;
+	border: 1px solid #bbb;
 }
 
 button:hover {
-    color: #3443e5;
-	border-color: #3443e5;
+    color: #222;
+	border-color: #888;
 }
 
 button svg {
@@ -174,7 +185,7 @@ button svg {
 }
 
 #page-menu {
-	width: 140px;
+	width: 160px;
 	flex: 0 0 auto;
 	margin-right: 40px;
 }
@@ -191,16 +202,26 @@ button svg {
 }
 
 #page-menu li {
-	display: flex;
-	align-items: center;
 	height: 24px;
 	padding-left: 20px;
 	font-size: 14px;
 }
 
 #page-menu li a {
+    display: flex;
+	align-items: center;
     color: #0d67f8;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+
+#page-menu svg {
+    width: 16px;
+}
+
+.menu-text {
+    margin-left: 10px;
 }
 
 .fill-dark {
@@ -208,7 +229,7 @@ button svg {
 }
 
 .fill-light {
-    fill: #ccc;
+    fill: #fff;
 }
 
 .table-row {
@@ -221,9 +242,8 @@ button svg {
 }
 
 .table-row button {
-    padding: 0;
+    padding: 2px 5px;
     margin-right: 10px;
-    border: none;
     background: transparent;
 }
 
@@ -239,7 +259,6 @@ button svg {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding-right: 20px;
 }
 
 .equal-width {
@@ -248,7 +267,6 @@ button svg {
 
 .table-cell svg {
     width: 16px;
-    vertical-align: middle;
 }
 
 .table-header {
